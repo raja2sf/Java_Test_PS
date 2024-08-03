@@ -5,16 +5,26 @@ import java.util.Scanner;
 public class ArrayUtility {
     public static int[] inputArray() {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("Enter the Numbers:");
-        int input    = scanner.nextInt();
-        int[] num = new int[input];
+        int size = input.nextInt();
+        int[] nums = new int[size];
         int i = 0;
-        while (i < input) {
-            System.out.println("enter the num:" + (i+1)+ ":");
-            num[i] = scanner.nextInt();
+        while (i < size) {
+            System.out.print("enter the num:  " + (i+1)+ ":  ");
+            nums[i] = input.nextInt();
             i++;
         }
-        return num;
+        return nums;
     }
+
+    public static void displayArray(int[] num){
+        int i = 0;
+        while (i <= num.length){
+            System.out.print(num[i] + i);
+            i++;
+        }
+    }
+
+
 }
